@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Affirmation</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <section class="style">
+  <h1>Affirmation Inspiration </h1>
+  <h2>IT's Ok , Tell Yourself that!!</h2>
+
+
+  <h3>Affirmation</h3>
+  <ul >
+  <% for(let i=0; i<affList.length; i++) {%>
+    <li >
+      <span><%= affList[i].emotion %></span>
+      <span><%= affList[i].affirmation %></span>
+      <span ><i class="fa-solid fa-heart"></i></span>
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+
+  </ul>
+
+  <h2>Add a Affirmation</h2>
+
+  <form action="/createAffirmation" method="POST">
+    <input type="text" placeholder="how are you feeling?" name="feeling">
+    <input type="text" placeholder="enter a affirmation" name="affirmationText">
+    <button type="submit"> Submit</button>
+  </form>
+  </section>
+  
+  <script src="https://kit.fontawesome.com/f11f67527e.js" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
